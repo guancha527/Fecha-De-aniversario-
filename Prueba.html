@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Recuerdas nuestra fecha?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6e6;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    #mensaje {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #d10068;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Recuerdas nuestra fecha de aniversario?</h1>
+  <p>Ingresa la fecha en formato: DD/MM/AAAA</p>
+  <input type="text" id="fecha" placeholder="Ej: 14/02/2023">
+  <br>
+  <button onclick="verificarFecha()">Enviar</button>
+  <div id="mensaje"></div>
+
+  <script>
+    function verificarFecha() {
+      const fechaIngresada = document.getElementById("fecha").value.trim();
+      const fechaCorrecta = "01/05/2024"; // Cambia esta fecha por la tuya
+
+      if (fechaIngresada === fechaCorrecta) {
+        document.getElementById("mensaje").innerText = "💖 Te amo 💖";
+      } else {
+        document.getElementById("mensaje").innerText = "Ups... esa no es la fecha 😢";
+      }
+    }
+  </script>
+</body>
+</html>
